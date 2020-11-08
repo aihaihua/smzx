@@ -1,0 +1,106 @@
+cd f:\test	  本地库地址
+
+git clone https://github.com/aihaihua/smzx.git    拉取项目
+
+在命令行中输入git config可以看到许多git的配置命令
+
+git config user.name "yiyun123gsd" 设置密码
+git config user.email "1325527402@qq.com" 设置邮箱
+ssh-keygen -t rsa -b 4096 -C "1325527402@qq.com"
+1325527402@qq.com      yiyun123gsd
+
+git branch fenzhiyuancheng  新建本地分支
+git checkout  fenzhiyuancheng  切换到此分支
+Switched to a new branch 'fenzhiyuancheng'切换到此分支
+git branch
+
+
+
+git remote add origin https://github.com/aihaihua/smzx.git
+git remote add origin https://github.com/aihaihua/smzx.git
+git push -u origin dev fenzhiyuancheng    同步到远程
+
+git push -u origin dev fenzhiyuancheng
+git checkout dev fenzhiyuancheng
+git pull 命令用来拉取该分支内容，与本地做为对比，防止冲突。
+因为我这里并没有什么需要更新，所以肯定是直接就没有具体的pull内容。
+
+
+git add 命令用来将所要更新的文件，添加到git队列中，以备后续的提交。
+可以用git add test.html 来添加指定的文件，或者直接git add . 来添加所有目录（不含空目录）
+
+
+git commit -am 命令
+用来做提交准备，-am 后面跟上注释，可以让其他人看到你本次为啥做出更改。此时并没有提交上去。
+
+
+git push 命令
+此命令才是真正的将所更改的文件提交到分支中。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+svn和git都是代码管理
+
+###  Git命令
+
+``` bash
+git init 		#初始化一个空白的代码仓库
+
+git add    	#把当前文件夹中的代码加入版本管理
+
+git commit -m '提交信息'   #把代码交到本地仓库
+
+git remote add origin ... 		#为代码仓库添加一个（本地与远程关联）
+
+git push origin master 		  #把本地的master分支推送到远程
+
+git pull 		#拉取服务器的远程分支
+
+
+
+git checkout -b feature/XXX 		#切换并创建新的分支
+git checkout 用户名				# 切换分支
+git branch -d feature/ruochen		#删除分支
+
+git branch  				#查看当前的所有分支
+
+git merge dev				#合并分支
+
+git status					#查看当前仓库的状态
+
+git log 						#查看日志记录
+
+git reset XXX --hard			#可以回退
+git log 						# 查看日志
+git reflog						# 查看所有日志
+
+git remote rm origin			#删除仓库地址
+```
+
+
+
+### gitee仓库创建
+
+ 1.ssh-keygen  --  回车  -  两次码云密码  --  用记事本打开c盘下的用户下的ssh文件  --  得到公钥
+
+2.个人头像  --  设置  --  ssh公钥  --  添加公钥  --  确定
+
+3.进入gitee  --  新建仓库  --  仓库名称  --  私有（仓库必须私有）  --  下面什么都不选  --  创建
+
+4.创建项目文件  --  git add .  --  git commit -m"干的内容注释"  --  git remote add origin git@gitee.com:ruo_chen/ruochen.git  --  git push -u origin master  -- yes
+
+5.管理  --  仓库成员管理  --  开发者  --  邀请用户  --  链接邀请
+
+6.复制ssh地址  --  git clone (仓库地址)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
